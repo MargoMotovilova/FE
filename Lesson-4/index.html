@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport"  content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body> 
-    <main> 
-        <div> 
-            <h1> 22 March, 2018</h1>
+    <main class="main"> 
+        <div class="main__header"> 
+            <h1 class="main__title"> 22 March, 2018</h1>
+            <button class="main__btn" aria-label="search"> <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M38 38L27 27" stroke="#8998B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 31C24.2843 31 31 24.2843 31 16C31 7.71573 24.2843 1 16 1C7.71573 1 1 7.71573 1 16C1 24.2843 7.71573 31 16 31Z" stroke="#8998B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="main__btn" aria-label="more"> <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 1H15V15H1V1Z" stroke="#8998B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 1H37V15H23V1Z" stroke="#8998B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 23H15V37H1V23Z" stroke="#8998B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 23H37V37H23V23Z" stroke="#8998B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
         </div>
-        <div> 
-            <ul> 
+        <div class="timeline"> 
+            <ul class="timeline__hours" aria-hidden="true"> 
                 <li> 
                     <span> 09:00</span>
                 </li>
@@ -52,64 +66,161 @@
                     <span> 20:00</span>
                 </li>
             </ul>
-            <ul> 
-                <li> Meet Sophia in airport </li>
-                <li> Studio workshop </li>
-                <li> Design workshop with Johny Ive </li>
+            <ul class="timeline__events"> 
+                <li class="timeline__event timeline__event--finance">
+                    Meet Sophia in airport
+                </li>
+                <li  class="timeline__event timeline__event--design"> 
+                    Studio workshop 
+                </li>
+                <li class="timeline__event timeline__event--managment"> 
+                    Design workshop with Johny Ive 
+                </li>
             </ul>
         </div>
     </main>
-    <aside> 
-        <div>
-            <span> March 2018</span>
+    <aside class="aside">  
+        <div class="calendar">
+            <div class="calendar__header">
+                <button class="calendar__btn calendar__btn--prev" aria-label="Previous month">
+                    <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 1L1 19L19 37" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+                <span class="calendar__title"> March 2018</span>
+                <button class="calendar__btn calendar__btn--prev" aria-label="Next month">
+                    <svg class="calendar__btn-image calendar__btn-image--reverse" width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 1L1 19L19 37" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calendar__body">
+                <ul class="calendar__day-names" aria-hidden="true"> 
+                    <li class="calendar__day-name"> M</li>
+                    <li class="calendar__day-name"> T</li>
+                    <li class="calendar__day-name"> W</li>
+                    <li class="calendar__day-name"> T</li>
+                    <li class="calendar__day-name"> F</li>
+                    <li class="calendar__day-name"> Sat</li>
+                    <li class="calendar__day-name"> Sun</li>
+                </ul>
+            </div>
+            <div class="calendar__footer"> 
+                <ul class="calendar__days">
+                    <li class="calendar__day">
+                        <a class="calendar__day-link" aria-label="1 March, 2020" href="?day=2020-03-01">1</a>
+                    </li> 
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="2 March, 2020" href="?day=2020-03-02">2</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="3 March, 2020" href="?day=2020-03-03">3</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="4 March, 2020" href="?day=2020-03-04">4</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="5 March, 2020" href="?day=2020-03-05">5</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="6 March, 2020" href="?day=2020-03-06">6</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="7 March, 2020" href="?day=2020-03-07">7</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="8 March, 2020" href="?day=2020-03-08">8</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="9 March, 2020" href="?day=2020-03-09">9</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="10 March, 2020" href="?day=2020-03-10">10</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="11 March, 2020" href="?day=2020-03-11">11</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="12 March, 2020" href="?day=2020-03-12">12</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="13 March, 2020" href="?day=2020-03-13">13</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="14 March, 2020" href="?day=2020-03-14">14</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="active" aria-label="14 March, 2020" href="?day=2020-03-14">15</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="active" aria-label="14 March, 2020" href="?day=2020-03-14">16</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="17 March, 2020" href="?day=2020-03-17">17</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="18 March, 2020" href="?day=2020-03-18">18</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="19 March, 2020" href="?day=2020-03-19">19</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="20 March, 2020" href="?day=2020-03-20">20</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="21 March, 2020" href="?day=2020-03-21">21</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="22 March, 2020" href="?day=2020-03-22">22</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="23 March, 2020" href="?day=2020-03-23">23</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="24 March, 2020" href="?day=2020-03-24">24</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="25 March, 2020" href="?day=2020-03-25">25</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="26 March, 2020" href="?day=2020-03-26">26</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="27 March, 2020" href="?day=2020-03-27">27</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="28 March, 2020" href="?day=2020-03-28">28</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="29 March, 2020" href="?day=2020-03-29">29</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="30 March, 2020" href="?day=2020-03-30">30</a>
+                    </li>
+                    <li class="calendar__day"> 
+                        <a class="calendar__day-link" aria-label="31 March, 2020" href="?day=2020-03-31">31</a>
+                    </li>
+                    <li class="calendar__day calendar__day--not-in-month"> 
+                        <a class="calendar__day-link" aria-label="1 April, 2020" href="?day=2020-04-01">1</a>
+                    </li>
+                    <li class="calendar__day calendar__day--not-in-month"> 
+                        <a class="calendar__day-link" aria-label="2 April, 2020" href="?day=2020-04-02">2</a>
+                    </li>
+                    <li class="calendar__day calendar__day--not-in-month"> 
+                        <a class="calendar__day-link" aria-label="3 April, 2020" href="?day=2020-04-03">3</a>
+                    <li class="calendar__day calendar__day--not-in-month"> 
+                        <a class="calendar__day-link" aria-label="4 April, 2020" href="?day=2020-04-04">4</a>    
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div> 
-            <ul> 
-                <li> M</li>
-                <li> T</li>
-                <li> W</li>
-                <li> T</li>
-                <li> F</li>
-                <li> Sat</li>
-                <li> Sun</li>
-            </ul>
+        <div class="category">
+            <p>Your categories</p>
         </div>
-        <div> 
-            <ul>
-                <li>1</li>
-                <li> 2</li>
-                <li> 3</li>
-                <li> 4</li>
-                <li> 5</li>
-                <li> 6</li>
-                <li> 7</li>
-                <li> 8</li>
-                <li> 9</li>
-                <li> 10</li>
-                <li> 11</li>
-                <li> 12</li>
-                <li> 13</li>
-                <li> 14</li>
-                <li> 15</li>
-                <li> 16</li>
-                <li> 17</li>
-                <li> 18</li>
-                <li> 19</li>
-                <li> 20</li>
-                <li> 21</li>
-                <li> 23</li>
-                <li> 24</li>
-                <li> 25</li>
-                <li> 26</li>
-                <li> 27</li>
-                <li> 28</li>
-                <li> 29</li>
-                <li> 30</li>
-                <li> 31</li>
-                <li> 1</li>
-                <li> 2</li>
-                <li> 3</li>
-            </ul>
+        <div class="categories">
+            <button class="button__1" aria-label="Button finance"> FINANCE</button>
+            <button class="button__2" aria-label="Button management"> MANAGEMENT</button>
+            <button class="button__3" aria-label="Button design"> DESIGN</button>
         </div>
     </aside>
 </body>

@@ -1,7 +1,314 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-size: 28px;
     font-weight: 500;
     line-height: 1.17857143;
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+.main {
+    flex-basis: 0;
+    flex-grow: 1535; 
+    width: 1535px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    padding: 1.59743041vw 3.36830835vw 1.59743041vw 4.23982869vw;
+}    
+.main__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #243D6F;
+    padding-bottom: 3.59743041vw;
+    margin-bottom: 4px;
+    position: relative;
+}
+.main__title {
+    flex-basis: auto;
+    flex-grow: 0;
+    font-size: 1.28571429rem;
+    line-height: 1.16666667; 
+}
+.main__btn {
+    flex-basis: 18px;
+    flex-grow: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    display: flex;
+    cursor: pointer;
+}
+
+.timeline {
+  /* position: relative; */
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+
+
+}
+li {
+    display: block;
+  }
+  ul.timeline__hours li {
+    height: 124px;
+  }
+  .timeline__events { 
+    width: 600px;
+  }
+  .timeline__event {
+    position: relative;
+    border: 6px solid;
+    border-style: none none none solid;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.timeline__event--finance {
+    height: 124px;
+    color: #243D6F;
+    margin-bottom: 124px;
+    border-color: #8576ED;
+    background: #8576ED26;
+}
+.timeline__event--design {
+    height: 309px;
+    color: #243D6F;
+    margin-bottom: 186px;
+    border-color: #3D83F9;
+    background:#3D83F926;
+}
+.timeline__event--managment {
+    height: 245px;
+    color: #243D6F;
+    margin-bottom: 0;
+    border-color: #EEA57C;
+    background:#EEA57C26;
+}
+
+.aside {
+    flex-basis: 0;
+    flex-grow: 802;
+    width: 800px;
+    background: rgba(42, 46, 65, 0.7);
+    box-sizing: border-box;
+    padding: 3.59743041vw 4.36830835vw 3.59743041vw 4.23982869vw;
+}
+.calendar {
+    --font-color: #FFFFFF;
+    --color: #3C82F9;
+}   
+
+.calendar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--font-color);
+
+    padding-bottom: 3.59743041vw;
+    margin-bottom: 4px;
+    position: relative;
+}
+.calendar__header::before,
+.calendar__header::after{
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background: black;
+    mix-blend-mode: normal;
+    opacity: 0.17;
+}
+.calendar__header::after{
+    bottom: -2px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.13;
+}
+.calendar__btn {
+    flex-basis: 18px;
+    flex-grow: 0;
+    border: 0;
+    padding:0;
+    background: transparent;
+    color: inherit;
+    display: flex;
+    cursor: pointer;
+}
+ 
+.calendar__btn-image {
+    width: 100%; 
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.calendar__btn-image--reverse {
+    transform: rotate(180deg);
+}
+.calendar__title {
+    flex-basis: auto;
+    flex-grow: 0;
+    font-size: 1.28571429rem;
+    line-height: 1.16666667; 
+}
+.calendar__body {
+    margin-top: 3.7414966%;
+}
+
+.calendar__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--font-color);
+
+    padding-bottom: 3.59743041vw;
+    margin-bottom: 4px;
+    position: relative;
+}
+.calendar__footer::before,
+.calendar__footer::after{
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background: black;
+    mix-blend-mode: normal;
+    opacity: 0.17;
+}
+.calendar__footer::after{
+    bottom: -2px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.13;
+}
+
+.calendar__day-names, 
+.calendar__days {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    display: flex;
+    gap: 5px; 
+}
+.active {
+    background: #3C82F9;
+
+}
+.calendar__day-name {
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: 26px;
+    line-height: 1.15384615;
+    text-align: center;
+    color: var(--font-color);
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin: 8.16326531% 0;
+}
+.calendar__days {
+    flex-wrap: wrap;
+}
+.calendar__day {
+    flex-basis: 13%;
+    flex-grow: 1;
+    padding: 0;
+}
+.calendar__day a {
+    width: 100%;
+    aspect-ratio: 1;
+    color: var(--font-color); 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 1.03571429rem;
+    line-height: 1.17241379;
+
+    border-radius: 50%;
+}
+
+.category {
+    text-align: left;    
+    color: white;
+}
+
+.categories {
+    width: 100%;
+    height: 300px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.categories .button {
+    width: 200px;
+    height: 80px;
+    border-radius: 12px;
+}
+
+.button__1 {
+    width: 200px;
+    height: 80px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    background: #8576ED;
+    margin-right: 5%;
+}
+.button__2 {
+    width: 200px;
+    height: 80px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    background: #F39946;
+}
+.button__3 {
+    width: 200px;
+    height: 80px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    background: #FF467E;
 }
