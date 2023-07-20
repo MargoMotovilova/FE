@@ -22,6 +22,11 @@
     font-size: 28px;
     font-weight: 500;
     line-height: 1.17857143;
+
+    --main-gray: #F3F3F3;
+    --light-gray: #A4B0C3;
+    --primary-text: #243D6F;
+    --accent-gray: #8998B4;
 }
 
 body {
@@ -37,6 +42,13 @@ body {
     box-sizing: border-box;
     padding: 1.59743041vw 3.36830835vw 1.59743041vw 4.23982869vw;
 }    
+.calendar__day--not-in-month {
+    color: var(--not-in-month-color);
+}
+
+.calendar__day--shown {
+    color: var(--shown-day-color);
+}
 .main__header {
     display: flex;
     justify-content: space-between;
@@ -251,11 +263,12 @@ li {
     flex-basis: 13%;
     flex-grow: 1;
     padding: 0;
+    color: var(--front-color);
 }
 .calendar__day a {
     width: 100%;
     aspect-ratio: 1;
-    color: var(--font-color); 
+    color: inherit; 
 
     display: flex;
     justify-content: center;
